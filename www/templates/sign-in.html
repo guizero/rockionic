@@ -1,0 +1,42 @@
+<ion-view view-title="Sign-In" class="sign-up-background">
+        <ion-header-bar align-title="left" class="bar-light">
+          <img class="title-image" src="img/logo.png">
+        </ion-header-bar>
+        
+
+        <ion-content>
+        
+          
+        </ion-content>
+        <div class="bar bar-subfooter">
+          <form name="signinForm" novalidate ng-submit="signinForm.$valid && signIn(user)">  
+            <div class="list">
+              <label class="item item-input" ng-class="{ 'has-error' : signinForm.email.$invalid && signinForm.$submitted }">
+                <span class="input-label">E-mail</span>
+                <input type="email" ng-model="user.email" name="email" required>
+              </label>
+              <div class="form-errors" ng-show="signinForm.email.$error && signinForm.$submitted" ng-messages="signinForm.email.$error" ng-messages-include="templates/form-errors.html"></div>
+
+              <label class="item item-input" ng-class="{ 'has-error-lr' : signinForm.password.$invalid  && signinForm.$submitted, 'valid-lr' : signinForm.password.$valid  && signinForm.$submitted}">
+                <span class="input-label">Senha</span>
+                <input type="password" ng-model="user.password" name="password" required>
+              </label>
+              <div class="form-errors"  
+                 ng-show="signinForm.password.$error && signinForm.$submitted"
+                 ng-messages="signinForm.password.$error"
+                 ng-messages-include="templates/form-errors.html">
+              </div> 
+            </div>
+            <div class="padding">
+              <button class="button button-block button-positive" type="submit">
+                Entrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </ion-view>
+
+<script id="templates/form-errors.html" type="text/ng-template">  
+  <div class="form-error" ng-message="required">Campo obrigatório.</div>
+  <div class="form-error" ng-message="email">O e-mail não foi preenchido corretamente.</div>
+</script>  

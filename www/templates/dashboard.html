@@ -1,0 +1,78 @@
+<ion-view view-title="Dashboard">
+  <ion-nav-buttons side="right">
+      <button class="button button-icon button-clear ion-refresh" ng-click="doRefresh()">
+      </button>
+    </ion-nav-buttons>
+  <ion-content>
+  	<div class="row">
+        <div class="col">
+          <div class="table-layout">
+          	  <div class="row">
+		          <div class="col" style="background-color:#6bccb4; text-align:center">
+			          <i class="icon ion-social-usd" style="line-height: 100px;font-size:30px;color:white"></i>
+		          </div>
+		          <div class="col col-75" style="">
+			          <div class="panel-body text-center">
+				          <p class="semibold text-muted mb0 mt5">CRÉDITOS DISPONÍVEIS</p>
+				          <br>
+				          <h3 class="semibold nm">{{dashboard.available_credits}}</h3>
+		          	  </div>
+		          </div>
+		      </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="table-layout">
+          	  <div class="row">
+		          <div class="col" style="background-color:#63d3e9 ; text-align:center">
+			          <i class="icon ion-toggle-filled" style="line-height: 100px;font-size:30px;color:white"></i>
+		          </div>
+		          <div class="col col-75" style="">
+			          <div class="panel-body text-center">
+				          <p class="semibold text-muted mb0 mt5">TAREFAS EM ABERTO</p>
+				          <br>
+				          <h3 class="semibold nm">{{dashboard.tasks_open}}</h3>
+		          	  </div>
+		          </div>
+		      </div>
+          </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col">
+          <div class="table-layout">
+          	  <div class="row">
+		          <div class="col" style="background-color:#63d3e9; text-align:center">
+			          <i class="icon ion-drag" style="line-height: 100px;font-size:30px;color:white"></i>
+		          </div>
+		          <div class="col col-75" style="">
+			          <div class="panel-body text-center">
+				          <p class="semibold text-muted mb0 mt5">TAREFAS EM ANDAMENTO</p>
+				          <br>
+				          <h3 class="semibold nm">{{dashboard.tasks_in_progress}}</h3>
+		          	  </div>
+		          </div>
+		      </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="table-layout">
+          	  <div class="row">
+		          <div class="col" style="background-color:#00b1e1; text-align:center">
+			          <i class="icon ion-checkmark-round" style="line-height: 100px;font-size:30px;color:white"></i>
+		          </div>
+		          <div class="col col-75" style="">
+			          <div class="panel-body text-center">
+				          <p class="semibold text-muted mb0 mt5">TAREFAS CONCLUÍDAS</p>
+				          <br>
+				          <h3 class="semibold nm">{{dashboard.tasks_done}}</h3>
+		          	  </div>
+		          </div>
+		      </div>
+          </div>
+        </div>
+    </div>     
+  </ion-content>
+  
+</ion-view>
